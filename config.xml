@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	id		= "com.chasemoody.festivalflagger"
+	version 	= "1.0.16">
+
+	<name>Geolocation</name>
+
+	<description>
+		JQMobile + Geolocation Test App
+	</description>
+
+	<author href="https://github.com/cmoody"
+		email="cmoody06@gmail.com">
+		Chase Moody
+	</author>
+	
+	<!-- Icons -->
+	<icon src="icon.png" gap:role="default" />
+	<!-- iOS -->
+	<icon src="icons/ios/icon.png" width="57" height="57" />
+	<icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+	<icon src="icons/ios/icon_at_2x.png" width="114" height="114" />
+	<!-- Android -->
+	<icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+
+	<!-- Splash Screens -->
+	<!-- iOS -->
+	<gap:splash src="splash/ios/Default.png" width="320" height="480" />
+	<gap:splash src="splash/ios/Default_at_2x.png" width="640" height="960" />
+	<gap:splash src="splash/ios/Default_iphone5.png" width="640" height="1136" />
+	<gap:splash src="splash/ios/Default-Landscape.png" width="1024" height="768" />
+	<gap:splash src="splash/ios/Default-Portrait.png" width="768" height="1024" />
+	<!-- Android -->
+	<gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+	<gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+	<gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+	<gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+	
+	<!-- Domain Access -->
+	<access origin="http://maps.google.com" />
+	<access origin="*.google.com" />
+	<access origin="*.googleapis.com" />
+	<access origin="*.gstatic.com" />
+	<access origin="http://api.chasemoody.com" />
+
+	<!-- Device Features -->
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+	
+	<!-- Preferences -->
+	<preference name="orientation" value="portrait" />
+	<preference name="exit-on-suspend" value="true" />
+	<preference name="show-splash-screen-spinner" value="false" />
+</widget>

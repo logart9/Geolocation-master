@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>FlagFinder</title>
+		<link rel="stylesheet" href="assets/css/jquery.mobile-1.2.0.css" />
+		<style>
+			html, body {
+			    width: 100%;
+			    height: 100%;
+			}
+			#map_container {
+				 position:absolute;top:40px;left:0; right:0; bottom:0;
+			}
+			#map_holder {
+				width: 100%;
+			    height: 50%;
+			}
+			#friend_details img {
+				 /* Responsive images (ensure images don't scale beyond their parents) */
+
+				  max-width: 100%;
+				  /* Part 1: Set a maxium relative to the parent */
+				
+				  width: auto\9;
+				  /* IE7-8 need help adjusting responsive images */
+				
+				  height: auto;
+				  /* Part 2: Scale the height according to the width, otherwise you get stretching */
+				
+				  vertical-align: middle;
+				  border: 0;
+				  -ms-interpolation-mode: bicubic;
+			}
+		</style>
+		<!--<script type="text/javascript" src="assets/js/cordova-2.0.0.js"></script>-->
+		<script src="phonegap.js"></script>
+		<script src="assets/js/jquery-1.8.0.min.js"></script>
+		<script src="assets/js/jquery.mobile-1.2.0.min.js"></script>
+		<script src="http://maps.google.com/maps/api/js?key=AIzaSyCJ7xhp7KwIi_rdp8WTVxja2r5KNvA1uK8&sensor=true"></script>
+		<script type="text/javascript" src="assets/js/festivalflagger.js"></script>
+	</head>
+	<body>
+		<!-- Home Page -->
+		<div data-role="page">
+			<div data-role="header">
+				<h1>FlagFinder</h1>
+			</div>
+			<div data-role="content">	
+				<ul data-role="listview">
+					<li><a href="#plantFlag" class="plantFlag">Plant Flag</a></li>
+					<li><a href="#mapAllFriends" data-transition="slidedown">Map All</a></li>
+					<li><a href="#info" data-transition="slidedown">Info</a></li>
+					<li><a href="#sendComment" data-transition="slidedown">Feedback</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- End Home Page -->
+		
+		<!-- PlantFlag Page -->
+		<div data-role="page" id="plantFlag">
+			<div data-role="header">
+				<a href="#home" data-rel="back" data-role="button" data-icon="back">Back</a>
+				<h1>Set Up Shop</h1>
+			</div>
+			<div data-role="content">	
+				<div id="flag_container">
+					<textarea id="plantComment" placeholder="Describe whats around"></textarea>
+					<button class="setFlag">Plant Flag</button>
+					<div class="geoContainer"></div>
+				</div>
+			</div>
+		</div>
+		<!-- End PlantFlag Page -->
+		
+		<!-- Map Page -->
+		<div data-role="page" id="mapAllFriends">
+			<div data-role="header">
+				<a href="#home" data-rel="back" data-role="button" data-icon="back">Back</a>
+				<h1>Map All</h1>
+			</div>
+			<div data-role="content">	
+				<div id="map_container">
+					<div id="map_holder"></div>
+					<div id="friend_details">
+						<img src="assets/img/aclpic.jpeg"/>
+						<p>Near people with chairs.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Map Page -->
+		
+		<!-- Info Page -->
+		<div data-role="page" id="info">
+			<div data-role="header">
+				<a href="#home" data-rel="back" data-role="button" data-icon="back">Back</a>
+				<h1>Info</h1>
+			</div>
+			<div data-role="content">
+				<div class="device"></div>
+				<p><em>Your Current Position is</em></p>
+				<div class="latlng"></div>
+			</div>
+		</div>
+		<!-- End Info Page -->
+		
+		<!-- Test Page -->
+		<div data-role="page" id="sendComment">
+			<div data-role="header">
+				<a href="#home" data-rel="back" data-role="button" data-icon="back">Back</a>
+				<h1>Comment</h1>
+			</div>
+			<div data-role="content">
+				<div id="comment_form">
+					<textarea id="comment" placeholder="Please provide any feedback you have about the app."></textarea>
+					<button class="submit_comment">Submit Comment</button>
+				</div>
+			</div>
+		</div>
+		<!-- End Test Page -->
+		
+	</body>
+</html>
